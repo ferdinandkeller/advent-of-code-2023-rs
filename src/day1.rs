@@ -25,6 +25,9 @@ pub fn solve_a(input: &str) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+/// Same as before, but with a bunch of replace calls to convert the words to numbers before parsing them.
+/// We can't just replace all the letters with their corresponding numbers, because there is some overlap
+/// (e.g. "zero" and "one" both contain "o", so "zerone" should give "01", not "0" or "1").
 pub fn solve_b(input: &str) -> Result<(), Box<dyn Error>> {
     println!(
         "solution 1-B : {}",
