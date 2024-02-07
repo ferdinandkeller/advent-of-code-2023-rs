@@ -1,4 +1,5 @@
 mod day1;
+mod day2;
 
 use std::error::Error;
 use std::fs::read_to_string;
@@ -9,6 +10,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         Some(day) => match day.as_str() {
             "day1a" => day1::solve_a(read_to_string("inputs/day1.txt")?.as_str()),
             "day1b" => day1::solve_b(read_to_string("inputs/day1.txt")?.as_str()),
+            "day2a" => day2::solve_a(read_to_string("inputs/day2.txt")?.as_str()),
+            "day2b" => day2::solve_b(read_to_string("inputs/day2.txt")?.as_str()),
             _ => Err("Invalid day!".into()),
         },
         None => Err("Please specify a day!".into()),
